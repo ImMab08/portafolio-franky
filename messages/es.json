@@ -1,0 +1,118 @@
+{
+  "header": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos"
+  },
+
+  "navbardProjects": {
+    "back": "Volver atrás"
+  },
+
+  "localSwitcher": {
+    "en": "Inglés",
+    "es": "Español"
+  },
+
+  "bubbleMessage": {
+    "text1": "¡Hola mundo!",
+    "text2": "Me llamo Franky Vargas",
+    "text3": "Desarrollador de software",
+    "text4": "A veces Frotend...",
+    "text5": "A veces Backend...",
+    "text6": "O casi siempre Full Stack.. 😎",
+    "text7": "Conoce un poco más de mí. ⬇️"
+  },
+
+  "hero": {
+    "title": "¡Hola!",
+    "subtitle": "Soy Franky Vargas",
+    "description": "Ingeniero de Software",
+    "cv": "HV",
+    "learnMore": "Conoce más"
+  },
+
+  "about": {
+    "title": "Transformar ideas en soluciones digitales",
+    "secondTitle": "",
+    "spanTitle": "excepcionales",
+    "description": "Uniendo creatividad y código para convertir las ideas en realidades digitales. Me apasiona crear experiencias web que cautiven e inspiren. Explora mi portafolio y sé testigo de la mezcla perfecta de innovación y experiencia técnica en cada proyecto.",
+    "experience": "Experiencia",
+    
+    "firstJob": {
+      "title": "Desarrollador Junior - Soporte y Soluciones a Plataformas LMS",
+      "company": "@Klazia",
+      "date": "Agosto 2023 - Diciembre 2024 (4 meses)",
+      "firstDescription": "Proporcioné soporte técnico y soluciones a plataformas LMS.",
+      "secondDescription": "Implementé metodologías como mobile-first, Scrum, RAD y BEM para la gestión y desarrollo de proyectos.",
+      "thirdDescription": "Desarrollé interfaces de usuario y funcionalidades utilizando React, Next.js y CSS."
+    },
+    "secondJob": {
+      "title": "Ayudante Desarrollador Junior",
+      "company": "@Klazia",
+      "date": "Diembre 2023 - Marzo 2024 (3 meses)",
+      "firstDescription": "Participé en el desarrollo de ladingpage usando tecnologías como Elementor de Worpress.",
+      "secondDescription": "Utilicé tecnologías como PHP, CSS y Javascript para el desarrollo y mantenimiento del sitio web.",
+      "thirdDescription": "Colaboré con equipos multidisciplinarios para definir y cumplir con los requerimientos del proyecto",
+      "quarterDescription": "Apliqué metodologías ágiles como Scrum para la planificación y ejecución de tareas.",
+      "fifthDescription": "Brindar soporte y a estudiantes de la plataforma."
+    },
+
+    "education": "Educación",
+    "firstEducation": {
+      "title": "Universidad del Valle",
+      "profession": "Administración de Empresas",
+      "description": "Carrera profesional en Administrador de Empresas. Con experiencia por competencias en GTH (Gestión del Talento Humano), contabilidad, gestión de proyectos y demás actividades afines. Apoyandome con diferentes herramientas como Office, Power BI y Bases de datos (Relacionales y no relaciones).",
+      "certification": "Certificado",
+      "date": "2021 - 2026"
+    },
+    "secondEducation": {
+      "title": "SENA",
+      "profession": "Análisis y Desarrollo de Software",
+      "description": "Técnologo en Análisis y Desarrollo de Sofware con competencian en análisis de requirimiento; diseño, maquetación y desarrollo de páginas webs, apps webs y API's. También cuento con solidos conocimientos en manejo de bases de datos relacionales y no relaciones al igual que manejo de diferentes herramientas para el desarrollo del código.",
+      "certification": "Certificado",
+      "date": "2023 - 2025"
+    },
+    "thirdEducation": {
+      "title": "Platzi",
+      "profession": "Escuela de desarrollo",
+      "description": "Estudie diferentes cursos de desarrollo web, bases de datos, lenguajes de programación para backend y frontend, desarrollo móvil al igual que métodologias y buenas prácticas para programación.",
+      "certification": "Certificado",
+      "date": "2024"
+    },
+    "programming": "Lenguajes de Programación"
+  },
+
+  "projects": {
+    "viewmore": "Ver más",
+    "dashboard": {
+      "title" : "Selecciona un proyecto"
+    },
+    "navMobile": {
+      "back": "Volver atrás"
+    },
+    "almenu": {
+      "title": "Almenú",
+      "description": "Aplicación web para la gestión de restaurantes."
+    },
+    "univalleapp": {
+      "title": "Univalle App",
+      "description": "Aplicación web y mobile para la optimización de procesos en la Universidad del Valle."
+    },
+    "todosapp": {
+      "title": "ToDo's App",
+      "description": "Aplicación web para la gestión de notas y tareas."
+    },
+    "onpixel": {
+      "title": "onePixel",
+      "description": "Landing page estatica."
+    },
+    "Plantare": {
+      "title": "Plantare",
+      "description": "Landing page estatica."
+    },
+    "hero": {
+      "title": "Selecciona un proyecto para conocer como fue trabajado."
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "tailwindcss";
+/* @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
+
+@theme {
+  --color-primary: #0f0f0f;
+  --color-secondary: #00bb01;
+  --color-tertiary: #272727;
+  --color-complementary: #141414;
+}
+
+/* globals.css */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
