@@ -33,55 +33,64 @@
   },
 
   "about": {
-    "title": "Transforming ideas into",
-    "secondTitle": "digital solutions",
-    "spanTitle": "exceptional",
-    "description": "Unifying creativity with code to bring ideas to digital realities. Im passionate about creating immersive web experiences that captivate and inspire. Explore my portfolio and witness the perfect blend of innovation and technical expertise in each project.",
-    "experience": "Experience",
-
-    "firstJob": {
-      "title": "Junior Developer - Support and Solutions for LMS Platforms",
-      "company": "@Klazia",
-      "date": "August 2023 - December 2024 (4 months)",
-      "firstDescription": "Provided technical support and solutions to LMS platforms.",
-      "secondDescription": "I implemented methodologies such as mobile-first, Scrum, RAD and BEM for project management and development.",
-      "thirdDescription": "I developed user interfaces and functionalities using React, Next.js and CSS."
-    },
-    "secondJob": {
-      "title": "Junior Assistant Developer",
-      "company": "@Klazia",
-      "date": "December 2023 - March 2024 (3 months)",
-      "firstDescription": "I participated in the development of ladingpage using technologies such as Worpress Elementor.",
-      "secondDescription": "I used technologies such as PHP, CSS and Javascript for the development and maintenance of the website.",
-      "thirdDescription": "Collaborated with multidisciplinary teams to define and meet project requirements",
-      "quarterDescription": "I applied agile methodologies such as Scrum for task planning and execution.",
-      "fifthDescription": "Provide support to students of the platform."
-    },
-
-    "education": "Education",
-    "firstEducation": {
-      "title": "Universidad del Valle",
-      "profession": "Business Administration",
-      "description": "Professional career in Business Administration. With experience in GTH (Human Talent Management), accounting, project management and other related activities. Supporting me with different tools such as Office, Power BI and Databases (relational and non-relational).",
-      "certification": "Certification",
-      "date": "2021 - 2026"
-    },
-    "secondEducation": {
-      "title": "SENA",
-      "profession": "Software Analysis and Development",
-      "description": "Technologist in Software Analysis and Development with competences in requirement analysis; design, layout and development of web pages, web apps and API's. I also have solid knowledge in relational and non-relational database management as well as handling different tools for code development.",
-      "certification": "Certification",
-      "date": "2023 - 2025"
-    },
-    "thirdEducation": {
-      "title": "Platzi",
-      "profession": "Development school",
-      "description": "I studied different courses on web development, databases, backend and frontend programming languages, mobile development as well as programming methods and best practices.",
-      "certification": "Certification",
-      "date": "2021"
-    },
-    "programming": "Programming Languajes"
+    "title": "MY JOURNEY",
+    "subtitle": "About",
+    "subtitle-span": "me",
+    "description": "A journey of continuous growth, from academic foundations to leading innovative projects."
   },
+
+  "experience": [
+    {
+      "type": "Education",
+      "title": "Business Administration",
+      "organization": "Universidad del Valle",
+      "period": "2021 - 2026",
+      "location": "Ciudad, País",
+      "description": "Professional career in Business Administration. With experience in GTH (Human Talent Management), accounting, project management and other related activities. Supporting me with different tools such as Office, Power BI and Databases (relational and non-relational).",
+      "skills": [
+        "Office",
+        "Power BI",
+        "Relational Databases",
+        "Project Management"
+      ]
+    },
+    {
+      "type": "Education",
+      "title": "Software Analysis and Development",
+      "organization": "SENA",
+      "period": "2023 - 2025",
+      "location": "Ciudad, País",
+      "description": "Technologist in Software Analysis and Development with competences in requirement analysis; design, layout and development of web pages, web apps and API's. I also have solid knowledge in relational and non-relational database management as well as handling different tools for code development.",
+      "skills": ["Web Development", "Databases", "APIs", "Relational DB"]
+    },
+    {
+      "type": "Education",
+      "title": "Development school",
+      "organization": "Platzi",
+      "period": "2021",
+      "location": "Ciudad, País",
+      "description": "I studied different courses on web development, databases, backend and frontend programming languages, mobile development as well as programming methods and best practices.",
+      "skills": ["Frontend", "Backend", "Best Practices", "Mobile Dev"]
+    },
+    {
+      "type": "Work",
+      "title": "Junior Developer - Support and Solutions for LMS Platforms",
+      "organization": "Klazia",
+      "period": "August 2023 - December 2024 (4 months)",
+      "location": "Ciudad, País",
+      "description": "Provided technical support and solutions to LMS platforms. I implemented methodologies such as mobile-first, Scrum, RAD and BEM for project management and development. I developed user interfaces and functionalities using React, Next.js and CSS.",
+      "skills": ["Scrum", "React", "Next.js", "CSS"]
+    },
+    {
+      "type": "Work",
+      "title": "Junior Assistant Developer",
+      "organization": "Klazia",
+      "period": "December 2023 - March 2024 (3 months)",
+      "location": "Ciudad, País",
+      "description": "I participated in the development of landing pages using technologies such as Wordpress Elementor. I used technologies such as PHP, CSS and Javascript for the development and maintenance of the website. Collaborated with multidisciplinary teams to define and meet project requirements. I applied agile methodologies such as Scrum for task planning and execution. Provide support to students of the platform.",
+      "skills": ["WordPress", "PHP", "JavaScript", "Scrum"]
+    }
+  ],
 
   "projects": {
     "viewmore": "View more",

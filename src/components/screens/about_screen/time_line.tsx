@@ -10,7 +10,13 @@ interface TimeLineProps {
   setActive: () => void;
 }
 
-const TimeLine: React.FC<TimeLineProps> = ({ item, index, Icon, isActive, setActive }) => {
+const TimeLine: React.FC<TimeLineProps> = ({
+  item,
+  index,
+  Icon,
+  isActive,
+  setActive,
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.5 });
 
@@ -31,28 +37,6 @@ const TimeLine: React.FC<TimeLineProps> = ({ item, index, Icon, isActive, setAct
       whileHover={{ scale: 1.03 }}
       onMouseEnter={setActive}
     >
-      {/* Timeline dot */}
-      <motion.div
-        className={`absolute top-1/2 transform -translate-y-1/2 w-6 h-6 rounded-full z-10 border-4 border-white dark:border-gray-800 ${
-          isActive
-            ? "bg-gradient-to-r from-blue-500 to-purple-600"
-            : "bg-gray-300 dark:bg-gray-600"
-        }`}
-        initial={{ scale: 0 }}
-        animate={isInView ? { scale: 1 } : { scale: 0 }}
-        transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-      />
-
-      {/* Connector line */}
-      <motion.div
-        className={`absolute w-0.5 bg-gradient-to-b from-transparent via-blue-500 to-transparent ${
-          isTop ? "top-1/2 bottom-0 h-16" : "top-0 bottom-1/2 h-16"
-        }`}
-        initial={{ scaleY: 0 }}
-        animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
-        transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-      />
-
       {/* Content card */}
       <div className={`${isTop ? "mt-20" : "mb-20"} w-80`}>
         <div
@@ -72,8 +56,8 @@ const TimeLine: React.FC<TimeLineProps> = ({ item, index, Icon, isActive, setAct
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <div className="text-xs">
-                    {item.type === "education" ? "Educación" : "Experiencia"}
+                  <div className="text-xs text-white">
+                    {item.type}
                   </div>
                   <span className="text-sm text-gray-500 dark:text-gray-400">
                     {item.period}
@@ -82,7 +66,7 @@ const TimeLine: React.FC<TimeLineProps> = ({ item, index, Icon, isActive, setAct
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                   {item.title}
                 </h3>
-                <p className="text-lg font-semibold text-blue-600 dark:text-blue-400">
+                <p className="text-lg font-semibold text-secondary">
                   {item.organization}
                 </p>
               </div>
@@ -98,7 +82,7 @@ const TimeLine: React.FC<TimeLineProps> = ({ item, index, Icon, isActive, setAct
               {item.skills.map((skill, skillIndex) => (
                 <div
                   key={skillIndex}
-                  className="text-xs hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
+                  className="text-xs font-semibold bg-green-600 px-2 py-0.5 rounded-full text-white transition-colors"
                 >
                   {skill}
                 </div>
@@ -107,22 +91,6 @@ const TimeLine: React.FC<TimeLineProps> = ({ item, index, Icon, isActive, setAct
           </div>
         </div>
       </div>
-
-      {/* Year indicator */}
-      <motion.div
-        className={`absolute ${
-          isTop ? "-bottom-2" : "-top-2"
-        } left-1/2 transform -translate-x-1/2 bg-white dark:bg-gray-800 px-3 py-1 rounded-full shadow-md border border-gray-200 dark:border-gray-700 z-20`}
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={
-          isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }
-        }
-        transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-      >
-        <span className="text-sm font-medium">
-          {item.period.split(" - ")[0]}
-        </span>
-      </motion.div>
     </motion.div>
   );
 };

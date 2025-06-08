@@ -33,60 +33,64 @@
   },
 
   "about": {
-    "title": "Transformar ideas en soluciones digitales",
-    "secondTitle": "",
-    "spanTitle": "excepcionales",
-    "description": "Uniendo creatividad y código para convertir las ideas en realidades digitales. Me apasiona crear experiencias web que cautiven e inspiren. Explora mi portafolio y sé testigo de la mezcla perfecta de innovación y experiencia técnica en cada proyecto.",
-    "experience": "Experiencia",
-    
-    "firstJob": {
-      "title": "Desarrollador Junior - Soporte y Soluciones a Plataformas LMS",
-      "company": "@Klazia",
-      "date": "Agosto 2023 - Diciembre 2024 (4 meses)",
-      "firstDescription": "Proporcioné soporte técnico y soluciones a plataformas LMS.",
-      "secondDescription": "Implementé metodologías como mobile-first, Scrum, RAD y BEM para la gestión y desarrollo de proyectos.",
-      "thirdDescription": "Desarrollé interfaces de usuario y funcionalidades utilizando React, Next.js y CSS."
-    },
-    "secondJob": {
-      "title": "Ayudante Desarrollador Junior",
-      "company": "@Klazia",
-      "date": "Diembre 2023 - Marzo 2024 (3 meses)",
-      "firstDescription": "Participé en el desarrollo de ladingpage usando tecnologías como Elementor de Worpress.",
-      "secondDescription": "Utilicé tecnologías como PHP, CSS y Javascript para el desarrollo y mantenimiento del sitio web.",
-      "thirdDescription": "Colaboré con equipos multidisciplinarios para definir y cumplir con los requerimientos del proyecto",
-      "quarterDescription": "Apliqué metodologías ágiles como Scrum para la planificación y ejecución de tareas.",
-      "fifthDescription": "Brindar soporte y a estudiantes de la plataforma."
-    },
-
-    "education": "Educación",
-    "firstEducation": {
-      "title": "Universidad del Valle",
-      "profession": "Administración de Empresas",
-      "description": "Carrera profesional en Administrador de Empresas. Con experiencia por competencias en GTH (Gestión del Talento Humano), contabilidad, gestión de proyectos y demás actividades afines. Apoyandome con diferentes herramientas como Office, Power BI y Bases de datos (Relacionales y no relaciones).",
-      "certification": "Certificado",
-      "date": "2021 - 2026"
-    },
-    "secondEducation": {
-      "title": "SENA",
-      "profession": "Análisis y Desarrollo de Software",
-      "description": "Técnologo en Análisis y Desarrollo de Sofware con competencian en análisis de requirimiento; diseño, maquetación y desarrollo de páginas webs, apps webs y API's. También cuento con solidos conocimientos en manejo de bases de datos relacionales y no relaciones al igual que manejo de diferentes herramientas para el desarrollo del código.",
-      "certification": "Certificado",
-      "date": "2023 - 2025"
-    },
-    "thirdEducation": {
-      "title": "Platzi",
-      "profession": "Escuela de desarrollo",
-      "description": "Estudie diferentes cursos de desarrollo web, bases de datos, lenguajes de programación para backend y frontend, desarrollo móvil al igual que métodologias y buenas prácticas para programación.",
-      "certification": "Certificado",
-      "date": "2024"
-    },
-    "programming": "Lenguajes de Programación"
+    "title": "MI TRAYECTORIA",
+    "subtitle": "Sobre",
+    "subtitle-span": "mí",
+    "description": "Un viaje de crecimiento continuo, desde los fundamentos académicos hasta liderar proyectos innovadores."
   },
+
+  "experience": [
+    {
+      "type": "Educación",
+      "title": "Administración de Empresas",
+      "organization": "Universidad del Valle",
+      "period": "2021 - 2026",
+      "location": "Ciudad, País",
+      "description": "Carrera profesional en Administración de Empresas. Con experiencia por competencias en GTH (Gestión del Talento Humano), contabilidad, gestión de proyectos y demás actividades afines. Apoyándome con herramientas como Office, Power BI y bases de datos (relacionales y no relacionales).",
+      "skills": ["Office", "Power BI", "Bases de Datos", "Gestión de Proyectos"]
+    },
+    {
+      "type": "Educación",
+      "title": "Análisis y Desarrollo de Software",
+      "organization": "SENA",
+      "period": "2023 - 2025",
+      "location": "Ciudad, País",
+      "description": "Técnologo en Análisis y Desarrollo de Software con competencias en análisis de requerimientos; diseño, maquetación y desarrollo de páginas web, aplicaciones web y API's. Con sólidos conocimientos en bases de datos relacionales y no relacionales, así como herramientas para desarrollo de código.",
+      "skills": ["HTML/CSS", "Bases de Datos", "APIs", "Maquetación"]
+    },
+    {
+      "type": "Educación",
+      "title": "Escuela de desarrollo",
+      "organization": "Platzi",
+      "period": "2024",
+      "location": "Ciudad, País",
+      "description": "Estudié diferentes cursos de desarrollo web, bases de datos, lenguajes de programación backend y frontend, desarrollo móvil y buenas prácticas de programación.",
+      "skills": ["Frontend", "Backend", "Buenas Prácticas", "Móvil"]
+    },
+    {
+      "type": "Trabajo",
+      "title": "Desarrollador Junior - Soporte y Soluciones a Plataformas LMS",
+      "organization": "Klazia",
+      "period": "Agosto 2023 - Diciembre 2024 (4 meses)",
+      "location": "Ciudad, País",
+      "description": "Proporcioné soporte técnico y soluciones a plataformas LMS. Implementé metodologías como mobile-first, Scrum, RAD y BEM para la gestión y desarrollo de proyectos. Desarrollé interfaces de usuario y funcionalidades utilizando React, Next.js y CSS.",
+      "skills": ["Scrum", "React", "Next.js", "CSS"]
+    },
+    {
+      "type": "Trabajo",
+      "title": "Ayudante Desarrollador Junior",
+      "organization": "Klazia",
+      "period": "Diciembre 2023 - Marzo 2024 (3 meses)",
+      "location": "Ciudad, País",
+      "description": "Participé en el desarrollo de landing pages usando tecnologías como Elementor de WordPress. Utilicé tecnologías como PHP, CSS y JavaScript para el desarrollo y mantenimiento del sitio web. Colaboré con equipos multidisciplinarios para definir y cumplir con los requerimientos del proyecto. Apliqué metodologías ágiles como Scrum para la planificación y ejecución de tareas. Brindé soporte a los estudiantes de la plataforma.",
+      "skills": ["WordPress", "PHP", "JavaScript", "Scrum"]
+    }
+  ],
 
   "projects": {
     "viewmore": "Ver más",
     "dashboard": {
-      "title" : "Selecciona un proyecto"
+      "title": "Selecciona un proyecto"
     },
     "navMobile": {
       "back": "Volver atrás"

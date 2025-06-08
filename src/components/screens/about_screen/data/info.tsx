@@ -8,7 +8,8 @@ import {
 } from "@/components/icons";
 import { ExperienceItem } from "@/components/types/types";
 
-// Experiences data
+
+// Datos de la experiencia
 export const experience: ExperienceItem[] = [
   {
     id: 1,
@@ -64,6 +65,7 @@ export const experience: ExperienceItem[] = [
   },
 ];
 
+// Datos complementarios de la experiencia.
 export const experiencia = [
   {
     label: "Años de Experiencia",
