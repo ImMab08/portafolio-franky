@@ -39,6 +39,12 @@
     "description": "A journey of continuous growth, from academic foundations to leading innovative projects."
   },
 
+  "more_experience": [
+    { "label": "Years of Experience", "value": "4+" },
+    { "label": "Completed Projects", "value": "25+" },
+    { "label": "Technologies Mastered", "value": "15+" }
+  ],
+
   "experience": [
     {
       "type": "Education",

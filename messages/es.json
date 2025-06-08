@@ -39,6 +39,13 @@
     "description": "Un viaje de crecimiento continuo, desde los fundamentos académicos hasta liderar proyectos innovadores."
   },
 
+  "more_experience": [
+    { "label": "Años de Experiencia", "value": "4+" },
+    { "label": "Proyectos Completados", "value": "25+" },
+    { "label": "Tecnologías Dominadas", "value": "15+" },
+    { "label": "Equipos Liderados", "value": "3" }
+  ],
+
   "experience": [
     {
       "type": "Educación",

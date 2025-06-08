@@ -39,7 +39,7 @@ const HomeScreen = () => {
             <div className="flex items-center border-white border rounded-lg py-1 px-3 md:py-2 md:px-4">
               <Link
                 className="flex text-white text-sm md:text-lg font-semibold "
-                href="/about"
+                href="/about-me"
               >
                 {t("learnMore")}
                 <IconArrowRight className="size-3 mt-1 ml-1 block md:hidden" />

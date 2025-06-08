@@ -56,24 +56,24 @@ const TimeLine: React.FC<TimeLineProps> = ({
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <div className="text-xs text-white">
+                  <p className="text-sm text-white">
                     {item.type}
-                  </div>
+                  </p>
                   <span className="text-sm text-gray-500 dark:text-gray-400">
                     {item.period}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                <h3 className="text-xl font-bold text-secondary mb-1">
                   {item.title}
                 </h3>
-                <p className="text-lg font-semibold text-secondary">
+                <p className="text-lg font-semibold text-white">
                   {item.organization}
                 </p>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+            <p className="text-gray-300 mb-4 leading-relaxed">
               {item.description}
             </p>
 

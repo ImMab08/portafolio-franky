@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 import { TimeLine } from "./time_line";
-import { experience, experiencia } from "./data/info";
+import { experience, MoreExperienceIcons } from "./data/info";
 import { IconLightBulb } from "@/components/icons";
 import { ExperienceItem } from "@/components/types/types";
 import { useTranslations } from "next-intl";
@@ -12,8 +12,10 @@ const AboutScreen = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const t = useTranslations()
   const tAbout = useTranslations("about");
   const tExperience = useTranslations("experience");
+  const tMoreExperience = t.raw("more_experience");
 
   return (
     <section className="flex flex-col md:flex-row items-center h-auto pt-44 md:pt-0 md:h-screen px-5 md:px-48">
@@ -39,36 +41,41 @@ const AboutScreen = () => {
         </div>
         <div className="py-5">
           {/* Stats section */}
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-2"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            {experiencia.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                >
-                  <div className="text-center hover:shadow-lg transition-shadow">
-                    <div className="bg-secondary text-white p-3 rounded-full w-fit mx-auto mb-4">
-                      <Icon className="size-5 md:size-6" />
-                    </div>
-                    <div className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                      {stat.value}
-                    </div>
-                    <div className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
-                      {stat.label}
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
+          <div className="py-5">
+            {/* Stats section */}
+            <motion.div
+              className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-2"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              {tMoreExperience.map(
+                (stat: { label: string; value: string }, index: number) => {
+                  const Icon = MoreExperienceIcons[index];
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                    >
+                      <div className="text-center hover:shadow-lg transition-shadow">
+                        <div className="bg-secondary text-white p-3 rounded-full w-fit mx-auto mb-4">
+                          <Icon className="size-5 md:size-6" />
+                        </div>
+                        <div className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                          {stat.value}
+                        </div>
+                        <div className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
+                          {stat.label}
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                }
+              )}
+            </motion.div>
+          </div>
         </div>
       </div>
 
