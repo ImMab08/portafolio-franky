@@ -1,35 +1,15 @@
 "use client";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 import { TimeLine } from "./time_line";
 import { experience, experiencia } from "./data/info";
 import { IconLightBulb } from "@/components/icons";
+import { ExperienceItem } from "@/components/types/types";
 
 const AboutScreen = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-
-  // Calculate the total width of the timeline
-  useEffect(() => {
-    if (containerRef.current) {
-      setWidth(
-        containerRef.current.scrollWidth - containerRef.current.offsetWidth
-      );
-    }
-  }, []);
-
-  // Update scroll button states
-  const handleScrollUpdate = () => {
-    if (!containerRef.current) return;
-
-    const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
-  };
 
   return (
     <section className="flex items-center h-screen px-5 md:px-48">
@@ -90,21 +70,21 @@ const AboutScreen = () => {
 
       <div className="w-1/2 overflow-auto">
         {/* Horizontal timeline container */}
+
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-gradient-to-r from-secondary via-emerald-500 to-green-400 transform -translate-y-1/2 z-0"></div>
 
           {/* Scrollable container */}
           <motion.div
-            className="flex overflow-auto scrool"
+            className="flex overflow-auto scrollbar-hide"
             ref={containerRef}
-            onScroll={handleScrollUpdate}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="flex gap-16 px-8 py-16 min-w-max bg-red">
-              {experience.map((item, index) => {
+              {experience.map((item: ExperienceItem, index) => {
                 const Icon = item.icon;
                 return (
                   <TimeLine

@@ -6,9 +6,10 @@ import {
   IconLightBulb,
   IconUsers,
 } from "@/components/icons";
+import { ExperienceItem } from "@/components/types/types";
 
 // Experiences data
-export const experience = [
+export const experience: ExperienceItem[] = [
   {
     id: 1,
     type: "education",

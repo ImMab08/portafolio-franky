@@ -1,27 +1,16 @@
-import { useEffect, useRef, useState } from "react";
+import React, { ElementType, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { ExperienceItem } from "@/components/types/types";
 
-const TimeLine = ({ item, index, Icon, isActive, setActive }) => {
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
+interface TimeLineProps {
+  item: ExperienceItem;
+  index: number;
+  Icon: ElementType;
+  isActive: boolean;
+  setActive: () => void;
+}
 
-  const containerRef = useRef<HTMLDivElement>(null);
-  // Update scroll button states
-  const handleScrollUpdate = () => {
-    if (!containerRef.current) return;
-
-    const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
-  };
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener("scroll", handleScrollUpdate);
-      return () => container.removeEventListener("scroll", handleScrollUpdate);
-    }
-  }, []);
+const TimeLine: React.FC<TimeLineProps> = ({ item, index, Icon, isActive, setActive }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.5 });
 

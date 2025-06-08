@@ -1,5 +1,7 @@
 export * from "./icon_download";
+export * from "./icon_arrow_left";
 export * from "./icon_arrow_right";
+export * from "./icon_redirect";
 
 export * from "./icon_code";
 export * from "./icon_github";
