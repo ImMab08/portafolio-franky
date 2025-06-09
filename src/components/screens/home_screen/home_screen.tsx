@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
-import { Figures} from "./figures";
+import { Figures } from "./figures";
 import { ImageLogo } from "./image_logo";
 
 import { IconArrowRight, IconDownload } from "@/components/icons";
@@ -11,7 +12,12 @@ const HomeScreen = () => {
   return (
     <section className="h-screen flex flex-col items-center justify-center px-5 md:px-48">
       <div className="flex flex-col md:flex-row md:w-full justify-between">
-        <div className="md:w-1/2 md:flex md:flex-col md:justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          className="md:w-1/2 md:flex md:flex-col md:justify-center"
+        >
           <h3 className="text-white text-2xl md:text-3xl 2xl:text-5xl font-bold">
             {t("title")}
           </h3>
@@ -47,12 +53,17 @@ const HomeScreen = () => {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="relative flex items-center justify-center z-50 top-0 left-0 pt-32 md:py-0">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          className="relative flex items-center justify-center z-50 top-0 left-0 pt-32 md:py-0"
+        >
           <ImageLogo />
           <Figures />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

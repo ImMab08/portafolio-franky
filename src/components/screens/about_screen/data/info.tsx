@@ -1,5 +1,4 @@
 import {
-  IconBriefcase,
   IconCalendar,
   IconCode,
   IconGraduationcap,
@@ -30,7 +29,7 @@ export const experience: ExperienceItem[] = [
     location: "",
     description: "",
     skills: ["", "", "", ""],
-    icon: IconCode,
+    icon: IconGraduationcap,
     color: "from-green-500 to-teal-600",
   },
   {
@@ -42,7 +41,7 @@ export const experience: ExperienceItem[] = [
     location: "",
     description: "",
     skills: ["", "", "", ""],
-    icon: IconBriefcase,
+    icon: IconCode,
     color: "from-orange-500 to-red-600",
   },
   {
@@ -54,8 +53,32 @@ export const experience: ExperienceItem[] = [
     location: "",
     description: "",
     skills: ["", "", "", ""],
-    icon: IconUsers,
-    color: "from-pink-500 to-purple-600",
+    icon: IconGraduationcap,
+    color: "from-green-500 to-teal-600",
+  },
+  {
+    id: 5,
+    type: "",
+    title: "",
+    organization: "",
+    period: "",
+    location: "",
+    description: "",
+    skills: ["", "", "", ""],
+    icon: IconCode,
+    color: "from-orange-500 to-red-600",
+  },
+  {
+    id: 6,
+    type: "",
+    title: "",
+    organization: "",
+    period: "",
+    location: "",
+    description: "",
+    skills: ["", "", "", ""],
+    icon: IconCode,
+    color: "from-orange-500 to-red-600",
   },
 ];
 

@@ -40,9 +40,9 @@
   },
 
   "more_experience": [
-    { "label": "Years of Experience", "value": "4+" },
-    { "label": "Completed Projects", "value": "25+" },
-    { "label": "Technologies Mastered", "value": "15+" }
+    { "label": "Years of Experience", "value": "2+" },
+    { "label": "Completed Projects", "value": "6+" },
+    { "label": "Technologies Mastered", "value": "8+" }
   ],
 
   "experience": [
@@ -67,34 +67,43 @@
       "period": "2023 - 2025",
       "location": "Ciudad, País",
       "description": "Technologist in Software Analysis and Development with competences in requirement analysis; design, layout and development of web pages, web apps and API's. I also have solid knowledge in relational and non-relational database management as well as handling different tools for code development.",
-      "skills": ["Web Development", "Databases", "APIs", "Relational DB"]
+      "skills": ["Software development", "Databases", "APIs", "Mockups"]
+    },
+    {
+      "type": "Work",
+      "title": "Junior Developer",
+      "organization": "Klazia",
+      "period": "11/2023 - 03/2024",
+      "location": "Colombia",
+      "description": "I participated in the development of a landing page using technologies like Elementor from WordPress. Collaborated with multidisciplinary teams to define and meet project requirements. Applied agile methodologies such as Scrum for task planning and execution.",
+      "skills": ["WordPress", "PHP", "Databases", "Scrum"]
     },
     {
       "type": "Education",
       "title": "Development school",
       "organization": "Platzi",
-      "period": "2021",
+      "period": "2024",
       "location": "Ciudad, País",
       "description": "I studied different courses on web development, databases, backend and frontend programming languages, mobile development as well as programming methods and best practices.",
       "skills": ["Frontend", "Backend", "Best Practices", "Mobile Dev"]
     },
     {
       "type": "Work",
-      "title": "Junior Developer - Support and Solutions for LMS Platforms",
+      "title": "React Native Instructor",
       "organization": "Klazia",
-      "period": "August 2023 - December 2024 (4 months)",
-      "location": "Ciudad, País",
-      "description": "Provided technical support and solutions to LMS platforms. I implemented methodologies such as mobile-first, Scrum, RAD and BEM for project management and development. I developed user interfaces and functionalities using React, Next.js and CSS.",
-      "skills": ["Scrum", "React", "Next.js", "CSS"]
+      "period": "04/2024 - 05/2025",
+      "location": "Colombia",
+      "description": "I designed and taught an introductory virtual React Native course with a practical focus, tailored to the context of mobile projects. I explained important concepts such as functional components, the use of Hooks (useState, useEffect), screen navigation, and basic API consumption, promoting best practices and proper structuring of mobile projects.",
+      "skills": ["React Native", "Figma", "Education", "Hooks"]
     },
     {
       "type": "Work",
-      "title": "Junior Assistant Developer",
-      "organization": "Klazia",
-      "period": "December 2023 - March 2024 (3 months)",
-      "location": "Ciudad, País",
-      "description": "I participated in the development of landing pages using technologies such as Wordpress Elementor. I used technologies such as PHP, CSS and Javascript for the development and maintenance of the website. Collaborated with multidisciplinary teams to define and meet project requirements. I applied agile methodologies such as Scrum for task planning and execution. Provide support to students of the platform.",
-      "skills": ["WordPress", "PHP", "JavaScript", "Scrum"]
+      "title": "SENA Intern",
+      "organization": "IKM",
+      "period": "01/2025 - 07/2025",
+      "location": "Colombia",
+      "description": "Design, development, and implementation of assigned projects using the Power Platform suite. Database modeling and deployment in SharePoint as well as the development of mobile and web solutions with Power Apps. Development of automations with Power Automate and API code development and refactoring with Python and vanilla JavaScript frontend.",
+      "skills": ["Microsoft 365", "Power Platform", "Python", "JavaScript"]
     }
   ],
 

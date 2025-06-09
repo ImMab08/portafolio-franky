@@ -82,7 +82,7 @@ const TimeLine: React.FC<TimeLineProps> = ({
               {item.skills.map((skill, skillIndex) => (
                 <div
                   key={skillIndex}
-                  className="text-xs font-semibold bg-green-600 px-2 py-0.5 rounded-full text-white transition-colors"
+                  className="text-xs font-semibold border border-secondary px-2 py-0.5 rounded-full text-white transition-colors"
                 >
                   {skill}
                 </div>

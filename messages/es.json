@@ -40,10 +40,9 @@
   },
 
   "more_experience": [
-    { "label": "Años de Experiencia", "value": "4+" },
-    { "label": "Proyectos Completados", "value": "25+" },
-    { "label": "Tecnologías Dominadas", "value": "15+" },
-    { "label": "Equipos Liderados", "value": "3" }
+    { "label": "Años de Experiencia", "value": "2+" },
+    { "label": "Proyectos Completados", "value": "6+" },
+    { "label": "Tecnologías Dominadas", "value": "8+" }
   ],
 
   "experience": [
@@ -52,7 +51,7 @@
       "title": "Administración de Empresas",
       "organization": "Universidad del Valle",
       "period": "2021 - 2026",
-      "location": "Ciudad, País",
+      "location": "Colombia",
       "description": "Carrera profesional en Administración de Empresas. Con experiencia por competencias en GTH (Gestión del Talento Humano), contabilidad, gestión de proyectos y demás actividades afines. Apoyándome con herramientas como Office, Power BI y bases de datos (relacionales y no relacionales).",
       "skills": ["Office", "Power BI", "Bases de Datos", "Gestión de Proyectos"]
     },
@@ -61,36 +60,50 @@
       "title": "Análisis y Desarrollo de Software",
       "organization": "SENA",
       "period": "2023 - 2025",
-      "location": "Ciudad, País",
+      "location": "Colombia",
       "description": "Técnologo en Análisis y Desarrollo de Software con competencias en análisis de requerimientos; diseño, maquetación y desarrollo de páginas web, aplicaciones web y API's. Con sólidos conocimientos en bases de datos relacionales y no relacionales, así como herramientas para desarrollo de código.",
-      "skills": ["HTML/CSS", "Bases de Datos", "APIs", "Maquetación"]
+      "skills": [
+        "Desarrollo de software",
+        "Bases de Datos",
+        "APIs",
+        "Maquetación"
+      ]
+    },
+    {
+      "type": "Trabajo",
+      "title": "Desarrollador Junior",
+      "organization": "Klazia",
+      "period": "11/2023 - 03/2024",
+      "location": "Colombia",
+      "description": "Participé en el desarrollo de ladingpage usando tecnologías como Elementor de Worpress. Colaboré con equipos multidisciplinarios para definir y cumplir con los requerimientos del proyecto. Apliqué metodologías ágiles como Scrum para la planificación y ejecución de tareas.",
+      "skills": ["WordPress", "PHP", "Bases de Datos", "Scrum"]
     },
     {
       "type": "Educación",
       "title": "Escuela de desarrollo",
       "organization": "Platzi",
       "period": "2024",
-      "location": "Ciudad, País",
+      "location": "Colombia",
       "description": "Estudié diferentes cursos de desarrollo web, bases de datos, lenguajes de programación backend y frontend, desarrollo móvil y buenas prácticas de programación.",
       "skills": ["Frontend", "Backend", "Buenas Prácticas", "Móvil"]
     },
     {
       "type": "Trabajo",
-      "title": "Desarrollador Junior - Soporte y Soluciones a Plataformas LMS",
+      "title": "Profesor React Native",
       "organization": "Klazia",
-      "period": "Agosto 2023 - Diciembre 2024 (4 meses)",
-      "location": "Ciudad, País",
-      "description": "Proporcioné soporte técnico y soluciones a plataformas LMS. Implementé metodologías como mobile-first, Scrum, RAD y BEM para la gestión y desarrollo de proyectos. Desarrollé interfaces de usuario y funcionalidades utilizando React, Next.js y CSS.",
-      "skills": ["Scrum", "React", "Next.js", "CSS"]
+      "period": "04/2024 - 05/2025",
+      "location": "Colombia",
+      "description": "Diseñé y dicté un curso virtual introductorio de React Native, con enfoque práctico y adaptado al contexto de proyectos móviles. Expliqué conceptos importantes como componentes funcionales, uso de Hooks (useState, useEffect), navegación entre pantallas, y consumo básico de APIs, promoviendo buenas prácticas y estructuración de proyectos mobiles.",
+      "skills": ["React Native", "Figma", "Educación", "Hooks"]
     },
     {
       "type": "Trabajo",
-      "title": "Ayudante Desarrollador Junior",
-      "organization": "Klazia",
-      "period": "Diciembre 2023 - Marzo 2024 (3 meses)",
-      "location": "Ciudad, País",
-      "description": "Participé en el desarrollo de landing pages usando tecnologías como Elementor de WordPress. Utilicé tecnologías como PHP, CSS y JavaScript para el desarrollo y mantenimiento del sitio web. Colaboré con equipos multidisciplinarios para definir y cumplir con los requerimientos del proyecto. Apliqué metodologías ágiles como Scrum para la planificación y ejecución de tareas. Brindé soporte a los estudiantes de la plataforma.",
-      "skills": ["WordPress", "PHP", "JavaScript", "Scrum"]
+      "title": "Aprendiz SENA",
+      "organization": "IKM",
+      "period": "01/2025 - 07/2025",
+      "location": "Colombia",
+      "description": "Diseño y desarrollo e implementación de proyectos asignados mediante el uso de la suit de Power Platform. Modelo y despliegue de base de datos en Sharepoint al igual que desarrollo de soluciones mobiles y web con Power Apps. Desarrollo de automatizaciones con Power Automate y desarrollo y refactorización de código de API's con Python y frontend con JS vanilla.",
+      "skills": ["Microsoft 365", "Power Platform", "Python", "JavaScript"]
     }
   ],
 

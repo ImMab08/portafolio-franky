@@ -12,7 +12,7 @@ const AboutScreen = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const t = useTranslations()
+  const t = useTranslations();
   const tAbout = useTranslations("about");
   const tExperience = useTranslations("experience");
   const tMoreExperience = t.raw("more_experience");
@@ -84,7 +84,12 @@ const AboutScreen = () => {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-gradient-to-r from-secondary via-emerald-500 to-green-400 transform -translate-y-1/2 z-0"></div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="absolute left-0 right-0 top-1/2 h-0.5 bg-gradient-to-r from-secondary via-emerald-500 to-green-400 transform -translate-y-1/2 z-0"
+          ></motion.div>
 
           {/* Scrollable container */}
           <motion.div
