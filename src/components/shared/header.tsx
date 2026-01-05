@@ -46,7 +46,7 @@ const Header = () => {
   return (
     <>
       <div
-        className={`absolute z-100 md:hidden size-full transition-transform duration-400 ease-in-out ${
+        className={`fixed inset-0 z-100 md:hidden size-full transition-transform duration-400 ease-in-out ${
           menuOpen ? "transform translate-x-0" : "transform -translate-x-full"
         }`}
       >
