@@ -82,46 +82,48 @@ const Header = () => {
         </div>
       </div>
 
-      <nav className="absolute z-20 w-full h-20 flex items-center justify-between px-5 md:px-48">
+      <nav className="flex items-center justify-center absolute w-full right-0 z-40 transition-all duration-300">
         {/* Div de links */}
-        <div className="hidden md:flex space-x-5">
-          {/* Mapeamos y realizamos el mismo proceso que en el '.map' realizado más arriba. */}
-          {navLinks.map((link, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-            >
-              <Link
-                href={link.href}
-                className="text-xl text-white font-semibold"
+        <div className="flex w-full justify-between max-w-6xl p-6 transition-all duration-300">
+          <div className="hidden md:flex space-x-5">
+            {/* Mapeamos y realizamos el mismo proceso que en el '.map' realizado más arriba. */}
+            {navLinks.map((link, index) => (
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
               >
-                {link.text}
-              </Link>
-            </motion.div>
-          ))}
-        </div>
+                <Link
+                  href={link.href}
+                  className="text-xl text-white font-semibold"
+                  key={index}
+                >
+                  {link.text}
+                </Link>
+              </motion.div>
+            ))}
+          </div>
 
-        {/* Div de icono barras mobile. */}
-        <div className="block md:hidden" onClick={toggleMenu}>
-          <IconBarsMenu className="w-8" />
-        </div>
+          {/* Div de icono barras mobile. */}
+          <div className="block md:hidden" onClick={toggleMenu}>
+            <IconBarsMenu className="w-8" />
+          </div>
 
-        {/* Div de iconos. */}
-        <div className="flex space-x-5">
-          {/* Mapeamos y realizamos el mismo proceso que en el '.map' realizado más arriba. */}
-          {navIcons.map((icon, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-            >
-              <Link href={icon.href}>{icon.icon}</Link>
-            </motion.div>
-          ))}
+          {/* Div de iconos. */}
+          <div className="flex space-x-5">
+            {/* Mapeamos y realizamos el mismo proceso que en el '.map' realizado más arriba. */}
+            {navIcons.map((icon, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+              >
+                <Link href={icon.href}>{icon.icon}</Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </nav>
     </>
