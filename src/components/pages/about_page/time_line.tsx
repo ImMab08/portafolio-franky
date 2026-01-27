@@ -1,6 +1,6 @@
 import React, { ElementType, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ExperienceItem } from "@/components/types/types";
+import { ExperienceItem } from "@/types/types";
 
 interface TimeLineProps {
   item: ExperienceItem;

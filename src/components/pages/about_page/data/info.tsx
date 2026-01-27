@@ -5,7 +5,7 @@ import {
   IconLightBulb,
   IconUsers,
 } from "@/components/icons";
-import { ExperienceItem } from "@/components/types/types";
+import { ExperienceItem } from "@/types/types";
 
 export const experience: ExperienceItem[] = [
   {

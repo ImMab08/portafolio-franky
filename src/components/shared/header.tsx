@@ -10,6 +10,7 @@ import {
   IconBarsMenu,
   IconCloseMenu,
 } from "@/components/icons";
+import { ButtonLanguage } from "@/components/ui/buttons/button_language"
 
 const Header = () => {
   // Estado para desplegar el menú para las pantallas responsive.
@@ -48,7 +49,7 @@ const Header = () => {
       <div
         className={`fixed inset-0 z-100 md:hidden size-full transition-transform duration-400 ease-in-out ${
           menuOpen ? "transform translate-x-0" : "transform -translate-x-full"
-        }`}
+        } overflow-hidden`}
       >
         {/* Este div es un background transparente para el fondo. */}
         <div
@@ -57,14 +58,15 @@ const Header = () => {
           }`}
           onClick={closeMenu}
         ></div>
-        <div className="w-3/4 h-full bg-primary shadow-2xl px-5 py-5 absolute z-50">
+        <div className="w-3/4 h-full flex flex-col justify-between bg-primary shadow-2xl px-5 py-5 absolute z-50">
           {/* Header del menú desplegable. */}
-          <div className="flex justify-end">
-            <IconCloseMenu className="w-6" onClick={closeMenu} />
+          <div className="flex items-center justify-between">
+            <ButtonLanguage />
+            <IconCloseMenu className="w-6 text-white" onClick={closeMenu} />
           </div>
 
           {/* Contenido del desplegable. */}
-          <div className=" flex flex-col pt-10 space-y-5 items-center justify-center">
+          <div className="flex flex-col pt-10 space-y-5 items-start justify-center">
             {/* Mapeamos los objetos creados anteriormente, el 'index' es importante para poder
 							declarar su indice, es decir, la cantidad de datos que hay y 'link' nos permite
 							usarlo cmo parámetro para poder acceder a su contenido como tal. */}
@@ -78,6 +80,10 @@ const Header = () => {
                 {link.text}
               </Link>
             ))}
+          </div>
+
+          <div>
+            
           </div>
         </div>
       </div>
@@ -107,7 +113,7 @@ const Header = () => {
 
           {/* Div de icono barras mobile. */}
           <div className="block md:hidden" onClick={toggleMenu}>
-            <IconBarsMenu className="w-8" />
+            <IconBarsMenu className="w-8 text-white" />
           </div>
 
           {/* Div de iconos. */}

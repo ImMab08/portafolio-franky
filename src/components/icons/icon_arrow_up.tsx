@@ -1,7 +1,6 @@
-import React from "react";
 import { IconProps } from "@/types/icon_props";
 
-export function IconArrowLeft({ width = 24, height = 24, ...props }: IconProps) {
+export function IconArrowUp({ width = 24, height = 24, ...props }: IconProps) {
   return (
     <svg
       {...props}
@@ -11,7 +10,7 @@ export function IconArrowLeft({ width = 24, height = 24, ...props }: IconProps) 
       viewBox="0 -960 960 960"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+      <path d="M480-528 324-372q-11 11-28 11t-28-11q-11-11-11-28t11-28l184-184q12-12 28-12t28 12l184 184q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-528Z" />
     </svg>
   );
 }

@@ -17,7 +17,7 @@ const HomeScreen = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="text-white text-2xl md:text-3xl xl:text-4xl font-bold"
+            className="text-text-primary text-2xl md:text-3xl xl:text-4xl font-bold"
           >
             {t("title")}
           </motion.h3>
@@ -25,7 +25,7 @@ const HomeScreen = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
-            className="text-white text-4xl md:text-5xl xl:text-5xl font-bold md:my-2"
+            className="text-text-primary text-4xl md:text-5xl xl:text-5xl font-bold md:my-2"
           >
             {t("subtitle")}
           </motion.h1>
@@ -33,9 +33,9 @@ const HomeScreen = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
-            className="text-white text-2xl md:text-3xl xl:text-4xl font-bold"
+            className="text-text-primary text-2xl md:text-3xl xl:text-4xl font-bold"
           >
-            <span className="text-secondary h-14">
+            <span className="text-text-tertiary  h-14">
               {"{"} {t("description")} {"}"}
             </span>
           </motion.h2>
@@ -62,7 +62,7 @@ const HomeScreen = () => {
               className="flex items-center border-white border rounded-lg py-1 px-3 md:py-2 md:px-4"
             >
               <Link
-                className="flex text-white text-sm md:text-lg font-semibold "
+                className="flex text-text-primary text-sm md:text-lg font-semibold "
                 href="/about-me"
               >
                 {t("learnMore")}

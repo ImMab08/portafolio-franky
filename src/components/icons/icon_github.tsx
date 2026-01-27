@@ -1,9 +1,5 @@
 import React from "react";
-
-type IconProps = React.SVGProps<SVGSVGElement> & {
-  width?: string | number;
-  height?: string | number;
-};
+import { IconProps } from "@/types/icon_props";
 
 export function IconGithub({width = 24, height = 24, ...props}: IconProps){
   return (
@@ -24,7 +20,7 @@ export function IconGithub({width = 24, height = 24, ...props}: IconProps){
         <g
           id="Dribbble-Light-Preview"
           transform="translate(-140.000000, -7559.000000)"
-          fill="#ffff"
+          fill="currentColor"
         >
           <g id="icons" transform="translate(56.000000, 160.000000)">
             <path

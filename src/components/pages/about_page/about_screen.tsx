@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { TimeLine } from "./time_line";
 import { experience, MoreExperienceIcons } from "./data/info";
 import { IconLightBulb } from "@/components/icons";
-import { ExperienceItem } from "@/components/types/types";
+import { ExperienceItem } from "@/types/types";
 import { useTranslations } from "next-intl";
 
 const AboutScreen = () => {

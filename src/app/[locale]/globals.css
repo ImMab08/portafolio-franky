@@ -1,11 +1,32 @@
 @import "tailwindcss";
 /* @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
 
-@theme {
+
+
+@theme inline {
+
+  /* Paleta de colores */
   --color-primary: #0f0f0f;
-  --color-secondary: #00bb01;
-  --color-tertiary: #272727;
+  --color-secondary: #FFFFFF;
+  --color-tertiary: #00bb01;
+  /* --color-tertiary: #272727; */
   --color-complementary: #141414;
+
+  /* Texto */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #0f0f0f;
+  --color-text-tertiary: #00bb01;
+  --color-text-complementary: #F5F5F5;
+  /* --color-text-complementary: #9b9c9f; */
+
+  --color-border: #e5e7eb;
+
+  /* Estados */
+  --color-success: #48B8AB;
+  --color-info: #28A6DF;
+  --color-warning: #fbbf24;
+  --color-danger: #ef4444;
+  
 }
 
 /* globals.css */
