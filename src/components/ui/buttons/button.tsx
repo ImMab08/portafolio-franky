@@ -11,7 +11,7 @@ const sizes: Record<Sizes, string> = {
 const variants: Record<Variants, string> = {
   primary: "bg-primary text-primary-foreground border-border border-primary duration-200 hover:brightness-125 active:bg-primary active:border-primary active:brightness-150",
   secondary: "bg-secondary text-secondary-foreground border-border hover:brightness-95 active:brightness-90",
-  outline: "bg-transparent rounded-lg text-text-primary border-border hover:bg-secondary hover:text-text-secondary active:rounded-t-lg",
+  outline: "bg-transparent rounded-lg text-text-primary border-secondary hover:bg-secondary hover:text-text-secondary hover:bg-complementary",
   ghost: "bg-transparent text-muted border-transparent hover:bg-surface/60",
   link: "bg-transparent border-transparent text-primary hover:underline p-0 h-auto",
   unstyled: ""
@@ -24,7 +24,7 @@ const base =
 
 export function Button({
 	variant = "primary",
-	size = "md",
+	size = "sm",
 	fullWidth = false,
 	isLoading = false,
 	startIcon,

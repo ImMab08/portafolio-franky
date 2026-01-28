@@ -14,13 +14,13 @@ export function IconGithub({width = 24, height = 24, ...props}: IconProps){
         id="Page-1"
         stroke="none"
         strokeWidth="1"
-        fill="none"
+        fill="#FFFFFF"
         fillRule="evenodd"
       >
         <g
           id="Dribbble-Light-Preview"
           transform="translate(-140.000000, -7559.000000)"
-          fill="currentColor"
+          fill="#FFFFFF"
         >
           <g id="icons" transform="translate(56.000000, 160.000000)">
             <path
