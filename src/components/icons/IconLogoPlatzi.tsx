@@ -1,12 +1,13 @@
 import React from "react";
+import { IconProps } from "@/types/icon_props";
 
-export function IconLogoPlatzi({ width, height, ...props }) {
+export function IconLogoPlatzi({ width = 24, height = 24, ...props }: IconProps) {
   return (
     <svg
       {...props}
       width={width}
       height={height}
-      fill="none"
+      fill="currentColor"
       viewBox="0 0 27 30"
       xmlns="http://www.w3.org/2000/svg"
     >

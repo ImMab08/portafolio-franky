@@ -11,7 +11,7 @@ import {
   IconCloseMenu,
 } from "@/components/icons";
 import { ButtonLanguage } from "@/components/ui/buttons/button_language"
-import { NavLink } from "../ui/nav_link";
+import { NavLink } from "@/components/ui/nav_link";
 
 const Header = () => {
   // Estado para desplegar el menú para las pantallas responsive.
@@ -92,7 +92,7 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
               >
-                <Link href={icon.href}>{icon.icon}</Link>
+                <Link className="" href={icon.href}>{icon.icon}</Link>
               </motion.div>
             ))}
           </div>

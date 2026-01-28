@@ -1,12 +1,13 @@
 import React from "react";
+import { IconProps } from "@/types/icon_props";
 
-export function IconEducation({ width, height, ...props }) {
+export function IconEducation({ width = 24, height = 24, ...props }: IconProps) {
   return (
     <svg
       {...props}
       width={width}
       height={height}
-      fill="#EDEDED"
+      fill="currentColor"
       viewBox="0 -960 960 960"
       xmlns="http://www.w3.org/2000/svg"
     >

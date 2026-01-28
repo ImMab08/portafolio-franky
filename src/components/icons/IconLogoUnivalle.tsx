@@ -1,6 +1,7 @@
 import React from "react";
+import { IconProps } from "@/types/icon_props";
 
-export function IconLogoUnivalle({ width, height, ...props }) {
+export function IconLogoUnivalle({ width = 24, height = 24, ...props }: IconProps) {
   return (
     <svg
       {...props}

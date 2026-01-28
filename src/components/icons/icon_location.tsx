@@ -1,9 +1,5 @@
 import React from "react";
-
-type IconProps = React.SVGProps<SVGSVGElement> & {
-  width?: string | number;
-  height?: string | number;
-};
+import { IconProps } from "@/types/icon_props";
 
 export function IconLocation({ width = 24, height = 24, ...props }: IconProps) {
   return (
@@ -11,7 +7,7 @@ export function IconLocation({ width = 24, height = 24, ...props }: IconProps) {
       {...props}
       width={width}
       height={height}
-      fill="#EDEDED"
+      fill="currentColor"
       viewBox="0 -960 960 960"
       xmlns="http://www.w3.org/2000/svg"
     >
