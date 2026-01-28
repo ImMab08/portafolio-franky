@@ -12,3 +12,9 @@ export interface ExperienceItem {
   icon: ElementType;
   color: string;
 }
+
+
+export interface NavLinksProps {
+  href: string;
+  children: React.ReactNode;
+}
