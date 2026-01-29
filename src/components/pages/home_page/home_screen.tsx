@@ -10,7 +10,7 @@ import { IconArrowRight, IconDownload } from "@/components/icons";
 const HomeScreen = () => {
   const t = useTranslations("hero");
   return (
-    <section className="h-screen flex flex-col items-center justify-center w-full max-w-6xl mx-auto p-6">
+    <section className="h-screen flex flex-col items-center justify-center w-full max-w-6xl mx-auto p-4">
       <div className="flex flex-col md:flex-row md:w-full justify-between">
         <div className="md:w-1/2 md:flex md:flex-col md:justify-center">
           <motion.h3

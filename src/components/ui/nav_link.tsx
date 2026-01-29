@@ -15,13 +15,13 @@ export function NavLink({ href, children }: NavLinksProps) {
 	const isActive = pathname === fullPath;
 
   return (
-    <div className="flex md:flex-col items-center space-x-2 space-y-2">
+    <div className="flex md:flex-col items-center">
 			{isActive && (
-				<div className="block md:hidden w-1.5 h-1.5 rounded-full bg-tertiary"></div>
+				<div className="block md:hidden w-1.5 h-1.5 rounded-full mr-2 bg-tertiary"></div>
 			)}
       <Link className={`text-xl text-text-primary font-semibold duration-300 transition-all ${isActive ? "text-text-tertiary" : "text-text- hover:text-text-primary/70" }`} href={href}>{children}</Link>
 			{isActive && (
-				<div className="hidden md:block w-1.5 h-1.5 rounded-full bg-tertiary"></div>
+				<div className="hidden md:block w-1.5 h-1.5 rounded-full bg-tertiary mt-2"></div>
 			)}
     </div>
   );
