@@ -18,68 +18,65 @@ const AboutScreen = () => {
   const tMoreExperience = t.raw("more_experience");
 
   return (
-    <section className="flex flex-col md:flex-row items-center h-auto pt-44 md:pt-0 md:h-screen px-5 md:px-48">
-      <div className="w-full md:w-1/2 flex flex-col gap-10 md:gap-10">
+    <section className="flex flex-col md:flex-row items-center h-auto md:h-screen max-w-6xl mx-auto px-6">
+      <div className="h-screen md:h-auto flex flex-col justify-center gap-10">
         <div className="flex flex-col">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-1 md:gap-2 bg-gradient-to-r from-secondary bg-clip-text text-transparent text-sm md:text-lg font-semibold mb-2 md:mb-0">
-              <IconLightBulb className="size-4 md:size-6 fill-secondary" />
+            <div className="flex items-center gap-1 md:gap-2 bg-gradient-to-r from-tertiary bg-clip-text text-transparent text-sm md:text-lg font-semibold mb-2 md:mb-0">
+              <IconLightBulb className="size-4 md:size-6 fill-tertiary" />
               {tAbout("title")}
             </div>
             <h2 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-2 md:mb-4">
               {tAbout("subtitle")}{" "}
-              <span className="text-secondary">{tAbout("subtitle-span")}</span>
+              <span className="text-tertiary">{tAbout("subtitle-span")}</span>
             </h2>
-            <p className="text-base md:text-xl text-gray-300 pr-10 md:pr-92">
+            <p className="text-base md:text-xl text-gray-300 md:pr-32">
               {tAbout("description")}
             </p>
           </motion.div>
         </div>
-        <div className="py-5">
-          {/* Stats section */}
-          <div className="py-5">
-            {/* Stats section */}
-            <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-2"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              {tMoreExperience.map(
-                (stat: { label: string; value: string }, index: number) => {
-                  const Icon = MoreExperienceIcons[index];
-                  return (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                    >
-                      <div className="text-center hover:shadow-lg transition-shadow">
-                        <div className="bg-secondary text-white p-3 rounded-full w-fit mx-auto mb-4">
-                          <Icon className="size-5 md:size-6" />
-                        </div>
-                        <div className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                          {stat.value}
-                        </div>
-                        <div className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
-                          {stat.label}
-                        </div>
-                      </div>
-                    </motion.div>
-                  );
-                }
-              )}
-            </motion.div>
-          </div>
-        </div>
+        {/* Stats section */}
+        <motion.div
+          className="flex flex-col items-start"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          {tMoreExperience.map(
+            (stat: { label: string; value: string }, index: number) => {
+              const Icon = MoreExperienceIcons[index];
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                >
+                  <div className="flex hover:shadow-lg transition-shadow space-x-4">
+                    <div className="bg-tertiary text-text-primary p-3 rounded-full w-fit mx-auto mb-4">
+                      <Icon className="size-5 md:size-7" />
+                    </div>
+                    <div className="flex flex-col">
+                      <p className="text-lg md:text-2xl font-bold text-text-primary">
+                        {stat.value}
+                      </p>
+                      <p className="text-xs text-text-primary/60">
+                        {stat.label}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            },
+          )}
+        </motion.div>
       </div>
 
-      <div className="w-full md:w-1/2 overflow-auto">
+      <div className=" w-full overflow-auto">
         {/* Horizontal timeline container */}
 
         <div className="relative">
@@ -99,7 +96,7 @@ const AboutScreen = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="flex gap-16 px-8 py-16 min-w-max bg-red">
+            <div className="flex gap-16 px-8 min-w-max bg-red">
               <div className="w-5 h-full bg-primary absolute top-0 left-0 z-40 mask-radial-[100%_100%] mask-radial-from-40% mask-radial-at-left"></div>
               {experience.map((item: ExperienceItem, index) => {
                 const Icon = item.icon;
@@ -115,7 +112,7 @@ const AboutScreen = () => {
                       location: tExperience(`${index}.location`),
                       description: tExperience(`${index}.description`),
                       skills: item.skills.map((_, i) =>
-                        tExperience(`${index}.skills.${i}`)
+                        tExperience(`${index}.skills.${i}`),
                       ),
                     }}
                     index={index}

@@ -19,7 +19,7 @@ export function NavLink({ href, children }: NavLinksProps) {
 			{isActive && (
 				<div className="block md:hidden w-1.5 h-1.5 rounded-full bg-tertiary"></div>
 			)}
-      <Link className={`text-xl text-text-primary font-semibold hover:text-text-primary/70 duration-300 transition-all ${isActive ? "text-text-tertiary" : "text-text-primary" }`} href={href}>{children}</Link>
+      <Link className={`text-xl text-text-primary font-semibold duration-300 transition-all ${isActive ? "text-text-tertiary" : "text-text- hover:text-text-primary/70" }`} href={href}>{children}</Link>
 			{isActive && (
 				<div className="hidden md:block w-1.5 h-1.5 rounded-full bg-tertiary"></div>
 			)}

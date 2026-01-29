@@ -39,9 +39,9 @@
   },
 
   "more_experience": [
-    { "label": "Años de Experiencia", "value": "2+" },
-    { "label": "Proyectos Completados", "value": "6+" },
-    { "label": "Tecnologías Dominadas", "value": "8+" }
+    { "label": "Años de experiencia", "value": "2+" },
+    { "label": "Proyectos completados", "value": "6+" },
+    { "label": "Tecnologías dominadas", "value": "8+" }
   ],
 
   "experience": [
