@@ -55,19 +55,16 @@ const AboutScreen = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                  className="flex hover:shadow-lg transition-shadow space-x-4"
                 >
-                  <div className="flex hover:shadow-lg transition-shadow space-x-4">
-                    <div className="bg-tertiary text-text-primary p-3 rounded-full w-fit mx-auto mb-4">
-                      <Icon className="size-5 md:size-7" />
-                    </div>
-                    <div className="flex flex-col">
-                      <p className="text-lg md:text-2xl font-bold text-text-primary">
-                        {stat.value}
-                      </p>
-                      <p className="text-xs text-text-primary/60">
-                        {stat.label}
-                      </p>
-                    </div>
+                  <div className="bg-tertiary text-text-primary p-3 rounded-full w-fit mx-auto mb-4">
+                    <Icon className="size-5 md:size-7" />
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-lg md:text-2xl font-bold text-text-primary">
+                      {stat.value}
+                    </p>
+                    <p className="text-xs text-text-primary/60">{stat.label}</p>
                   </div>
                 </motion.div>
               );
@@ -76,7 +73,7 @@ const AboutScreen = () => {
         </motion.div>
       </div>
 
-      <div className=" w-full overflow-auto">
+      <div className="h-screen md:h-auto w-full overflow-auto">
         {/* Horizontal timeline container */}
 
         <div className="relative">
@@ -96,7 +93,7 @@ const AboutScreen = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="flex gap-16 px-8 min-w-max bg-red">
+            <div className="flex gap-16 px-0 md:px-8 min-w-max bg-red">
               <div className="w-5 h-full bg-primary absolute top-0 left-0 z-40 mask-radial-[100%_100%] mask-radial-from-40% mask-radial-at-left"></div>
               {experience.map((item: ExperienceItem, index) => {
                 const Icon = item.icon;
