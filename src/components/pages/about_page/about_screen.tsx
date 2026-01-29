@@ -26,7 +26,7 @@ const AboutScreen = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-1 md:gap-2 bg-gradient-to-r from-tertiary bg-clip-text text-transparent text-sm md:text-lg font-semibold mb-2 md:mb-0">
+            <div className="flex items-center gap-1 md:gap-2 bg-gradient-to-r from-tertiary bg-clip-text text-transparent text-sm md:text-lg font-semibold mb-2 md:mb-1">
               <IconLightBulb className="size-4 md:size-6 fill-tertiary" />
               {tAbout("title")}
             </div>
@@ -86,7 +86,7 @@ const AboutScreen = () => {
 
         {/* Scrollable container */}
         <motion.div
-          className="flex overflow-auto scrollbar-hide"
+          className="flex overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory md:snap-none"
           ref={containerRef}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

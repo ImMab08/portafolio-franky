@@ -112,7 +112,7 @@ const Header = () => {
       </div>
 
       {/* Panel desktop */}
-      <nav className="flex items-center justify-center absolute w-full right-0 z-40 transition-all duration-300">
+      <nav className="flex items-center justify-center absolute w-full right-0 z-40 transition-all duration-300 md:py-5">
         {/* Div de links */}
         <div className="flex w-full items-center justify-between max-w-6xl p-4 transition-all duration-300">
           <div className="hidden md:flex space-x-5">

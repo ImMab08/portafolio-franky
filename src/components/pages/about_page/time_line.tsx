@@ -18,7 +18,7 @@ const TimeLine: React.FC<TimeLineProps> = ({
   setActive,
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.5 });
+  const isInView = useInView(ref, { once: false, amount: 0.2 });
 
   // Determine if the item is positioned above or below the timeline
   const isTop = index % 2 === 0;
@@ -26,7 +26,8 @@ const TimeLine: React.FC<TimeLineProps> = ({
   return (
     <motion.div
       ref={ref}
-      className={`relative flex flex-col items-center ${
+      id={`timeline-${index}`}
+      className={`relative flex flex-col items-center snap-center min-w-[350px]${
         isTop ? "flex-col" : "flex-col-reverse"
       }`}
       initial={{ opacity: 0, y: isTop ? -50 : 50 }}
