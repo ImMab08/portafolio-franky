@@ -1,7 +1,7 @@
 'use client'
 
-import { Header } from "@/components/shared/header";
-import { HomeScreen } from "@/components/pages/home_page/home_screen";
+import { Header } from "@/components/layout/header";
+import { HomeScreen } from "@/features/home_page/home_screen";
 
 export default function Home() {
   return (
