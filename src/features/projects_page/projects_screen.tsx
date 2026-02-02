@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const ProjectsScreen = () => {
   return (
-    <div className="h-screen flex flex-col w-full items-center justify-center px-5 md:px48">
+    <div className="flex flex-col size-full flex-1 items-center justify-center px-5 md:px48">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
