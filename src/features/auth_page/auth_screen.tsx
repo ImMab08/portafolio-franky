@@ -5,7 +5,7 @@ import { IconArrowBack } from "@/shared/icons";
 
 export default function AuthScreen() {
   return (
-    <div className="flex flex-1 h-full min-h-screen text-text-primary">
+    <div className="flex flex-1 h-screen text-text-primary overflow-hidden">
       <div className="absolute top-0 w-full mx-auto p-8">
         <nav className="relative flex items-center justify-between sm:h-10">
 					<Link href="/">
