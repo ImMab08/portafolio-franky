@@ -1,6 +1,6 @@
+import React from "react";
 import { Link } from "@/i18n/navigation";
 import { IconBarsMenu } from "@/shared/icons";
-import React from "react";
 
 interface HeaderProjectsProps {
   onMenuClick: () => void;
