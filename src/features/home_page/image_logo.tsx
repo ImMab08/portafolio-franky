@@ -13,8 +13,8 @@ const ImageLogo = () => {
         <Image
           className="relative"
           src="/img/logo/picture-franky.png"
-          width={330}
-          height={330}
+          width={500}
+          height={500}
           alt=""
         />
       </motion.div>
