@@ -6,7 +6,8 @@
   "header": {
     "home": "Home",
     "about": "About me",
-    "projects": "Projects"
+    "projects": "Projects",
+    "courses": "Courses"
   },
 
   "navbardProjects": {

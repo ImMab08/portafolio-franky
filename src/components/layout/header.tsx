@@ -45,6 +45,7 @@ const Header = () => {
     { text: `${t("home")}`, href: "/" },
     { text: `${t("about")}`, href: "/about-me" },
     { text: `${t("projects")}`, href: "/projects" },
+    { text: `${t("courses")}`, href: "https://codigoconfrank.vercel.app/" },
   ];
 
   // links de redirección a otras páginas fuera del sitio.
