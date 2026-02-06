@@ -1,13 +1,14 @@
 import { createSupabaseServer } from "@/lib/supabase/server";
 import { redirect } from "@/i18n/navigation";
 
-export default async function AdminLayout({
+export default async function Layout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   const supabase = await createSupabaseServer();
 
   const {
@@ -17,7 +18,7 @@ export default async function AdminLayout({
   if (!user) {
     redirect({
       href: "/auth",
-      locale: params.locale,
+      locale: locale,
     });
   }
 
