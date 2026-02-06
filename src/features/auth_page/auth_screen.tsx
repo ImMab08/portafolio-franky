@@ -1,20 +1,41 @@
-import React from "react";
-import { Link } from "@/i18n/navigation";
+'use client'
+
+import React, { useState } from "react";
+import { Link, useRouter } from "@/i18n/navigation";
 
 import { IconArrowBack } from "@/shared/icons";
+import { createClient } from "@/lib/supabase/client";
 
 export default function AuthScreen() {
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleAuth = async () => {
+    const { error } = await createClient.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (!error) {
+      router.push("/admin");
+    } else {
+      return (
+        <div></div>
+      )
+    }
+  };
   return (
     <div className="flex flex-1 h-screen text-text-primary overflow-hidden">
       <div className="absolute top-0 w-full mx-auto p-8">
         <nav className="relative flex items-center justify-between sm:h-10">
-					<Link href="/">
-						<IconArrowBack className="" />
-					</Link>
+          <Link href="/">
+            <IconArrowBack className="" />
+          </Link>
         </nav>
       </div>
-      <div className="flex flex-col items-center flex-1 flex-shrink-0 px-5 pt-16 pb-8 border-r border-border shadow-lg bg-anotherbg">
-        <div className="flex-1 flex flex-col justify-center w-[330px] sm:w-[384px]">
+      <div className="flex flex-col items-center flex-1 shrink-0 px-5 pt-16 pb-8 border-r border-border shadow-lg bg-anotherbg">
+        <div className="flex-1 flex flex-col justify-center w-88.5 sm:w-[384px]">
           <div className="mb-20 space-y-1">
             <h2 className="text-3xl font-semibold">Bienvenido de vuelta</h2>
             <h3 className="text-base text-text-primary/40">
@@ -31,6 +52,7 @@ export default function AuthScreen() {
               <input
                 type="email"
                 placeholder="correo@ejemplo.com"
+                onChange={e => setEmail(e.target.value)}
                 className="h-10 rounded-lg border border-border px-3 outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
@@ -49,12 +71,16 @@ export default function AuthScreen() {
               <input
                 type="password"
                 placeholder="••••••••"
+                onChange={e => setPassword(e.target.value)}
                 className="h-10 rounded-lg border border-border px-3 outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
           </div>
 
-          <button className="w-full p-4 bg-tertiary/60 hover:bg-tertiary transition-all duration-200 rounded-3xl mt-10 cursor-pointer text-lg font-semibold">
+          <button 
+            onClick={handleAuth}
+            className="w-full p-4 bg-tertiary/60 hover:bg-tertiary transition-all duration-200 rounded-3xl mt-10 cursor-pointer text-lg font-semibold"
+          >
             Ingresar
           </button>
         </div>
@@ -64,7 +90,7 @@ export default function AuthScreen() {
         </div>
       </div>
 
-      <div className="flex-col items-center justify-center flex-1 flex-shrink hidden basis-1/4 xl:flex">
+      <div className="flex-col items-center justify-center flex-1 shrink hidden basis-1/4 xl:flex">
         <div className="relative flex flex-col gap-6 text-text-primary">
           <div className="absolute select-none -top-12 -left-14">
             <span className="text-[160px] leading-none ">“</span>
