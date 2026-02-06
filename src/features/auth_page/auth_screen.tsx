@@ -1,30 +1,78 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import { Link, useRouter } from "@/i18n/navigation";
 
-import { IconArrowBack } from "@/shared/icons";
+import { IconArrowBack, IconError, IconInfo } from "@/shared/icons";
 import { createClient } from "@/lib/supabase/client";
 
 export default function AuthScreen() {
   const router = useRouter();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const [error, setError] = useState<string | null>(null);
+  const [info, setInfo] = useState<string | null>(null);
+
+  type InputStatus = "default" | "error" | "info";
 
   const handleAuth = async () => {
-    const { error } = await createClient.auth.signInWithPassword({
+    setError(null);
+    setInfo(null);
+
+    if (!email || !password) {
+      setInfo("Debes de rellenar todos los campos.");
+      return;
+    }
+
+    setLoading(true);
+
+    const { error: authError } = await createClient.auth.signInWithPassword({
       email,
       password,
     });
 
-    if (!error) {
-      router.push("/admin");
-    } else {
-      return (
-        <div></div>
-      )
+    setLoading(false);
+
+    if (authError) {
+      setError("El correo o la contraseña son incorrectos.");
+      return;
     }
+
+    router.push("/admin");
   };
+
+  //? Estilos reutilizables
+  const inputClass = (status: InputStatus = "default") => {
+    const base =
+      "h-10 rounded-lg border px-3 outline-none focus:ring-2 transition-all";
+
+    if (status === "error") {
+      return `${base} border-red-500 focus:ring-red-500`;
+    }
+
+    if (status === "info") {
+      return `${base} border-blue-500 focus:ring-blue-500`;
+    }
+
+    return `${base} border-border focus:ring-primary`;
+  };
+
+  const labelClass = (status: InputStatus = "default") => {
+    const base = "font-semibold text-sm";
+    if (status === "error") {
+      return `${base} text-red-500`;
+    }
+
+    if (status === "info") {
+      return `${base} text-blue-500`;
+    }
+
+    return `${base} text-text-primary`;
+  };
+
   return (
     <div className="flex flex-1 h-screen text-text-primary overflow-hidden">
       <div className="absolute top-0 w-full mx-auto p-8">
@@ -46,21 +94,36 @@ export default function AuthScreen() {
           <div className="flex flex-col space-y-6">
             {/* Correo */}
             <div className="flex flex-col space-y-2">
-              <label className="font-semibold text-sm">
+              <label
+                className={labelClass(
+                  error ? "error" : info ? "info" : "default",
+                )}
+              >
                 Correo electrónico
               </label>
               <input
                 type="email"
                 placeholder="correo@ejemplo.com"
-                onChange={e => setEmail(e.target.value)}
-                className="h-10 rounded-lg border border-border px-3 outline-none focus:ring-2 focus:ring-primary"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  setError(null);
+                }}
+                className={inputClass(
+                  error ? "error" : info ? "info" : "default",
+                )}
               />
             </div>
 
             {/* Contraseña */}
             <div className="flex flex-col space-y-2">
               <div className="flex justify-between">
-                <label className="font-semibold text-sm">Contraseña</label>
+                <label
+                  className={labelClass(
+                    error ? "error" : info ? "info" : "default",
+                  )}
+                >
+                  Contraseña
+                </label>
                 <Link
                   href="/forgot-password"
                   className="font-semibold text-sm text-text-primary/40 hover:text-text-primary duration-300 transition-all hover:underline"
@@ -68,20 +131,40 @@ export default function AuthScreen() {
                   Olvidé mi contraseña
                 </Link>
               </div>
+
               <input
                 type="password"
                 placeholder="••••••••"
-                onChange={e => setPassword(e.target.value)}
-                className="h-10 rounded-lg border border-border px-3 outline-none focus:ring-2 focus:ring-primary"
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  setError(null);
+                }}
+                className={inputClass(
+                  error ? "error" : info ? "info" : "default",
+                )}
               />
             </div>
+            {info && (
+              <div className="flex items-center space-x-2">
+                <IconInfo className="text-blue-500" />
+                <p className="text-sm text-blue-500">{info}</p>
+              </div>
+            )}
+
+            {error && (
+              <div className="flex items-center space-x-2">
+                <IconError className="text-red-500" />
+                <p className="text-sm text-red-500">{error}</p>
+              </div>
+            )}
           </div>
 
-          <button 
+          <button
             onClick={handleAuth}
+            disabled={loading}
             className="w-full p-4 bg-tertiary/60 hover:bg-tertiary transition-all duration-200 rounded-3xl mt-10 cursor-pointer text-lg font-semibold"
           >
-            Ingresar
+            {loading ? "Ingresando..." : "Ingresar"}
           </button>
         </div>
         <div className="text-center text-balance text-xs text-foreground-lighter sm:mx-auto sm:max-w-sm space-y-2 select-none">

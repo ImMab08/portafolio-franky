@@ -3,6 +3,8 @@ export * from "./icon_arrow_down";
 export * from "./icon_arrow_left";
 export * from "./icon_arrow_right";
 
+export * from "./icon_info";
+export * from "./icon_error";
 export * from "./icon_home";
 export * from "./icon_download";
 export * from "./icon_redirect";
