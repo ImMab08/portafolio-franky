@@ -30,7 +30,7 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
         </div>
 
         <div className="size-full p-4">
-          <div className="w-full h-[100px] group relative inline-block  transition-all duration-300">
+          <div className="w-full h-25 group relative inline-block  transition-all duration-300">
             <div className="w-full h-full bg-gray-300 rounded-md"></div>
             <div
               className="
@@ -65,7 +65,7 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
         </div>
 
         <div className="size-full p-4">
-          <div className="w-full h-[100px] group relative inline-block  transition-all duration-300">
+          <div className="w-full h-25 group relative inline-block  transition-all duration-300">
             <div className="w-full h-full bg-gray-300 rounded-md"></div>
             <div
               className="

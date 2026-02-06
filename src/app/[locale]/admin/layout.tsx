@@ -1,5 +1,7 @@
-import { createSupabaseServer } from "@/lib/supabase/server";
 import { redirect } from "@/i18n/navigation";
+import { createSupabaseServer } from "@/lib/supabase/server";
+
+import { SideMenuAdmin } from "@/components/layout/side_menu_admin";
 
 export default async function Layout({
   children,
@@ -22,5 +24,13 @@ export default async function Layout({
     });
   }
 
-  return <main>{children}</main>;
+  return (
+    <main>
+      <div className="flex h-screen overflow-hidden">
+        <SideMenuAdmin />
+
+        {children}
+      </div>
+    </main>
+  );
 }

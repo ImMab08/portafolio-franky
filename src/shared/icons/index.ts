@@ -4,11 +4,15 @@ export * from "./icon_arrow_left";
 export * from "./icon_arrow_right";
 
 export * from "./icon_info";
+export * from "./icon_pencil";
+export * from "./icon_delete";
 export * from "./icon_error";
 export * from "./icon_home";
+export * from "./icon_logout";
 export * from "./icon_download";
 export * from "./icon_redirect";
 export * from "./icon_loading"
+export * from "./icon_visibility";
 export * from "./icon_open_folder";
 export * from "./icon_account_circle";
 
