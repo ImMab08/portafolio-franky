@@ -1,7 +1,6 @@
-import React from 'react'
+import AdminPage from "@/features/admin_page/admin_page";
+import React from "react";
 
 export default function Home() {
-  return (
-    <div>Hola mundo</div>
-  )
+  return <AdminPage />;
 }

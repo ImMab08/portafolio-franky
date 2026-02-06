@@ -1,9 +1,25 @@
-import React from 'react'
+import { createSupabaseServer } from "@/lib/supabase/server";
+import { redirect } from "@/i18n/navigation";
 
-export default function Layout({ children }: {children: React.ReactNode}) {
-  return (
-    <main className='w-screen h-screen'>
-      {children}
-    </main>
-  )
+export default async function AdminLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
+  const supabase = await createSupabaseServer();
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    redirect({
+      href: "/auth",
+      locale: params.locale,
+    });
+  }
+
+  return <main>{children}</main>;
 }
