@@ -14,16 +14,6 @@
     "back": "Volver atrás"
   },
 
-  "bubbleMessage": {
-    "text1": "¡Hola mundo!",
-    "text2": "Me llamo Franky Vargas",
-    "text3": "Desarrollador de software",
-    "text4": "A veces Frotend...",
-    "text5": "A veces Backend...",
-    "text6": "O casi siempre Full Stack.. 😎",
-    "text7": "Conoce un poco más de mí. ⬇️"
-  },
-
   "hero": {
     "title": "¡Hola!",
     "subtitle": "Soy Franky Vargas",
@@ -108,6 +98,9 @@
   ],
 
   "projects": {
+    "hero": {
+      "title": "Selecciona un proyecto para conocer como fue trabajado."
+    },
     "viewmore": "Ver más",
     "dashboard": {
       "title": "Selecciona un proyecto"
@@ -115,28 +108,28 @@
     "navMobile": {
       "back": "Volver atrás"
     },
-    "almenu": {
-      "title": "Almenú",
-      "description": "Aplicación web para la gestión de restaurantes."
-    },
-    "univalleapp": {
-      "title": "Univalle App",
-      "description": "Aplicación web y mobile para la optimización de procesos en la Universidad del Valle."
-    },
-    "todosapp": {
-      "title": "ToDo's App",
-      "description": "Aplicación web para la gestión de notas y tareas."
-    },
-    "onpixel": {
-      "title": "onePixel",
-      "description": "Landing page estatica."
-    },
-    "Plantare": {
-      "title": "Plantare",
-      "description": "Landing page estatica."
-    },
-    "hero": {
-      "title": "Selecciona un proyecto para conocer como fue trabajado."
-    }
+    "preview": [
+      {
+        "almenu": {
+          "title": "Almenú",
+          "description": "Aplicación web para la gestión completa de restaurantes.",
+          "image": "/img/projects/image_almenu.png"
+        }
+      },
+      {
+        "codigoconfrank": {
+          "title": "Código con Frank",
+          "description": "Landingpage informativa sobre cursos de programación",
+          "image": "/img/projects/image_codigoconfrank.png"
+        }
+      },
+      {
+        "ikm": {
+          "title": "IKM",
+          "description": "Proyecto de sitio oficial para IKM Information and Knowledge Management.",
+          "image": "/img/projects/image_ikm.png"
+        }
+      }
+    ]
   }
 }

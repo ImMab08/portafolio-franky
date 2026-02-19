@@ -1,5 +1,12 @@
 import { ElementType } from "react";
 
+export type Project = {
+  title: string;
+  description: string;
+  image: string;
+};
+
+
 export interface ExperienceItem {
   id: number;
   type: string;

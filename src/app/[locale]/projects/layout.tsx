@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 import { HeaderProjects } from "@/components/layout/header_projects";
-import SideMenu from "@/components/layout/side_menu";
+import { SideMenu } from "@/components/layout/side_menu_projects";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);

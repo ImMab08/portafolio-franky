@@ -1,4 +1,4 @@
-import { IconDelete, IconPencil, IconVisibility } from "@/shared/icons";
+import { IconDelete, IconOpenFolder, IconPencil, IconVisibility } from "@/shared/icons";
 
 type PostStatus = "Activo" | "Borrador" | "Inactivo";
 type PostType = "Proyecto" | "Blog";
@@ -11,9 +11,7 @@ export interface Post {
   date: string;
 }
 
-const posts: Post[] = [
-
-];
+const posts: Post[] = [];
 
 export function PostsTable() {
   return (
@@ -37,8 +35,17 @@ export function PostsTable() {
           <tbody className="h-full">
             {posts.length === 0 ? (
               <tr className="flex-1 border-t border-[#222] table size-full">
-                <td colSpan={5} className="text-center py-16 text-gray-500">
-                  No hay proyectos aún
+                <td colSpan={20} className="text-center py-16 text-gray-500">
+                  <div className="text-center space-y-4 flex flex-col items-center justify-center">
+                    <IconOpenFolder width={50} height={50} />
+                    <div className="">
+                      <p className="text-text-primary">No hay publicaciones aún</p>
+                      <p>Empieza creando un proyecto nuevo</p>
+                    </div>
+                    <button className="bg-tertiary/20 hover:bg-tertiary/60 duration-300 py-2 px-6 rounded-lg text-text-primary cursor-pointer">
+                      Crear mi primer post
+                    </button>
+                  </div>
                 </td>
               </tr>
             ) : (

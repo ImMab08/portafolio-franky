@@ -19,7 +19,7 @@ export function HeaderProjects({ onMenuClick }: HeaderProjectsProps) {
             <IconBarsMenu
               width={28}
               height={28}
-              className="block md:hidden fill-secondary"
+              className="block md:hidden fill-secondary cursor-pointer"
             />
           </button>
         </div>
