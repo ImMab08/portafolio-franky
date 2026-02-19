@@ -12,9 +12,9 @@ export function HeaderProjects({ onMenuClick }: HeaderProjectsProps) {
       {/* Navbar mobile */}
       <nav className="block md:hidden w-full h-16 p-4 border-b-2 border-border">
         <div className="flex justify-between">
-          <Link href="/" className="flex items-center text-text-primary hover:text-text-tertiary transition-all duration-300">
-            Regresar
-          </Link>
+          <p className="text-text-primary text-lg font-semibold text-center ">
+            Proyectos
+          </p>
           <button onClick={onMenuClick}>
             <IconBarsMenu
               width={28}
@@ -28,7 +28,10 @@ export function HeaderProjects({ onMenuClick }: HeaderProjectsProps) {
 
       <nav className="hidden md:block w-full h-16 p-4 border-b-2 border-border">
         <div>
-          <Link href="/" className="flex items-center text-text-primary hover:text-text-tertiary transition-all duration-300">
+          <Link
+            href="/"
+            className="flex items-center text-text-primary hover:text-text-tertiary transition-all duration-300"
+          >
             Regresar
           </Link>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslations } from "next-intl";
 
 import { ButtonLanguage } from "../language_switcher";
@@ -28,17 +28,30 @@ export function SideMenu({ isOpen, onClose }: SideMenuProps) {
     };
   });
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Limpieza por si el componente se desmonta
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   return (
     <>
       {/* Vista mobile */}
       <div
         className={`fixed inset-0 z-50 md:hidden transition-all duration-300 ${
-          isOpen ? "pointer-events-auto" : "pointer-events-none"
+          isOpen ? "" : "pointer-events-none"
         }`}
       >
         {/* Fondo oscuro (backdrop) */}
         <div
-          className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${
+          className={`absolute inset-0 bg-primary/80 transition-opacity duration-300 ${
             isOpen ? "opacity-100" : "opacity-0"
           }`}
           onClick={onClose}
@@ -51,10 +64,7 @@ export function SideMenu({ isOpen, onClose }: SideMenuProps) {
           }`}
         >
           <div className="flex items-center justify-between h-16 p-4 border-b-2 border-border">
-            <p className="text-text-primary text-2xl font-semibold text-center ">
-              Proyectos
-            </p>
-            <div className="flex space-x-4">
+            <div className="flex w-full justify-between space-x-4">
               <ButtonLanguage />
               <IconCloseMenu
                 width={28}
