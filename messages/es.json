@@ -113,21 +113,24 @@
         "almenu": {
           "title": "Almenú",
           "description": "Aplicación web para la gestión completa de restaurantes.",
-          "image": "/img/projects/image_almenu.png"
+          "image": "/img/projects/image_almenu.png",
+          "href": "/projects/almenu"
         }
       },
       {
         "codigoconfrank": {
           "title": "Código con Frank",
           "description": "Landingpage informativa sobre cursos de programación",
-          "image": "/img/projects/image_codigoconfrank.png"
+          "image": "/img/projects/image_codigoconfrank.png",
+          "href": "/projects/codigo-con-frank"
         }
       },
       {
         "ikm": {
           "title": "IKM",
           "description": "Proyecto de sitio oficial para IKM Information and Knowledge Management.",
-          "image": "/img/projects/image_ikm.png"
+          "image": "/img/projects/image_ikm.png",
+          "href": "/projects/ladingpage-ikm"
         }
       }
     ]

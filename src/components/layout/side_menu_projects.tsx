@@ -6,6 +6,7 @@ import { Project } from "@/shared/types/types";
 
 import { IconCloseMenu } from "@/shared/icons";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 
 interface SideMenuProps {
   isOpen: boolean;
@@ -25,6 +26,7 @@ export function SideMenu({ isOpen, onClose }: SideMenuProps) {
       title: data.title,
       description: data.description,
       image: data.image,
+      href: data.href,
     };
   });
 
@@ -89,15 +91,16 @@ export function SideMenu({ isOpen, onClose }: SideMenuProps) {
                     className="object-cover"
                   />
                 </div>
-                <div
+                <Link
+                  href={project.href}
                   className="
-                absolute w-full h-full left-1/2 -translate-x-1/2 top-0
-                opacity-0 translate-y-1
-                group-hover:opacity-100 group-hover:translate-y-0
-                transition-all duration-200 ease-out
-                bg-primary/80 text-white p-3 rounded shadow-lg
-                cursor-pointer select-none
-              "
+                    absolute w-full h-full left-1/2 -translate-x-1/2 top-0
+                    opacity-0 translate-y-1
+                    group-hover:opacity-100 group-hover:translate-y-0
+                    transition-all duration-200 ease-out
+                    bg-primary/80 text-white p-3 rounded shadow-lg
+                    cursor-pointer select-none
+                  "
                 >
                   <h3 className="font-semibold mb-1 text-text-tertiary">
                     {project.title}
@@ -105,7 +108,7 @@ export function SideMenu({ isOpen, onClose }: SideMenuProps) {
                   <p className="text-xs text-text-primary/80">
                     {project.description}
                   </p>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
@@ -115,9 +118,9 @@ export function SideMenu({ isOpen, onClose }: SideMenuProps) {
       {/* Vista desktop */}
       <div
         onClick={onClose}
-        className="hidden md:block max-w-62.5 w-full h-full flex-1 border-r-2 border-border"
+        className="hidden md:block max-w-62.5 w-full h-full flex-1 bg-complementary"
       >
-        <div className="h-16 p-4 border-b-2 border-border">
+        <div className="h-16 p-4">
           <p className="text-text-primary text-2xl font-semibold text-center ">
             Proyectos
           </p>
@@ -137,15 +140,16 @@ export function SideMenu({ isOpen, onClose }: SideMenuProps) {
                   className="object-cover"
                 />
               </div>
-              <div
+              <Link
+                href={project.href}
                 className="
-                absolute w-full h-full left-1/2 -translate-x-1/2 top-0
-                opacity-0 translate-y-1
-                group-hover:opacity-100 group-hover:translate-y-0
-                transition-all duration-200 ease-out
-                bg-primary/80 text-white p-3 rounded shadow-lg
-                cursor-pointer select-none
-              "
+                  absolute w-full h-full left-1/2 -translate-x-1/2 top-0
+                  opacity-0 translate-y-1
+                  group-hover:opacity-100 group-hover:translate-y-0
+                  transition-all duration-200 ease-out
+                  bg-primary/80 text-white p-3 rounded shadow-lg
+                  cursor-pointer select-none
+                "
               >
                 <h3 className="font-semibold mb-1 text-text-tertiary">
                   {project.title}
@@ -153,7 +157,7 @@ export function SideMenu({ isOpen, onClose }: SideMenuProps) {
                 <p className="text-xs text-text-primary/80">
                   {project.description}
                 </p>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

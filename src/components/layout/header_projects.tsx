@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "@/i18n/navigation";
-import { IconBarsMenu } from "@/shared/icons";
+import { IconArrowBack, IconBarsMenu } from "@/shared/icons";
+import { ButtonLanguage } from "../language_switcher";
 
 interface HeaderProjectsProps {
   onMenuClick: () => void;
@@ -10,7 +11,7 @@ export function HeaderProjects({ onMenuClick }: HeaderProjectsProps) {
   return (
     <>
       {/* Navbar mobile */}
-      <nav className="block md:hidden w-full h-16 p-4 border-b-2 border-border">
+      <nav className="block md:hidden w-full h-16 p-4 bg-complementary">
         <div className="flex justify-between">
           <p className="text-text-primary text-lg font-semibold text-center ">
             Proyectos
@@ -26,14 +27,18 @@ export function HeaderProjects({ onMenuClick }: HeaderProjectsProps) {
       </nav>
       {/* Navbar desktop */}
 
-      <nav className="hidden md:block w-full h-16 p-4 border-b-2 border-border">
-        <div>
+      <nav className="hidden md:block w-full h-16 p-4 bg-complementary">
+        <div className="flex justify-between ">
           <Link
             href="/"
-            className="flex items-center text-text-primary hover:text-text-tertiary transition-all duration-300"
+            className="group flex items-center space-x-2 border px-4 rounded-lg transition-all duration-300 text-text-primary hover:bg-secondary"
           >
-            Regresar
+            <IconArrowBack className="mt-0.5 transition-colors duration-300 group-hover:text-text-secondary" />
+            <p className="text-base font-semibold transition-colors duration-300 group-hover:text-text-secondary">
+              Volver atrás
+            </p>
           </Link>
+          <ButtonLanguage />  
         </div>
       </nav>
     </>
